@@ -30,6 +30,8 @@ return require('packer').startup(function(use)
 			ts_update()
 		end,
 	}
+
+	use 'folke/tokyonight.nvim'
 			
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

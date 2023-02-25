@@ -10,4 +10,8 @@ o.scs = true
 
 o.so = 4
 
--- o.tgc = true
+require('telescope').setup{
+	defaults = {
+		file_ignore_patterns = { "^node_modules/" }
+	}
+}
