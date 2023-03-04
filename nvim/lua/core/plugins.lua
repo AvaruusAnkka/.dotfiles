@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
 	use {
 		  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 			requires = { {'nvim-lua/plenary.nvim'} }
-	}
+	} -- telescope
 
 	use 'neovim/nvim-lspconfig' -- configurations for nvim lsp
 
@@ -29,9 +29,13 @@ return require('packer').startup(function(use)
 			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
 			ts_update()
 		end,
-	}
+	} -- treesitter
 
-	use 'folke/tokyonight.nvim'
+	use 'github/copilot.vim' -- copilot for vim
+
+	use 'prettier/vim-prettier' -- prettier for vim
+		
+	use 'folke/tokyonight.nvim' -- theme
 			
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
