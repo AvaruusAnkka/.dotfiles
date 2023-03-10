@@ -23,17 +23,13 @@ return require('packer').startup(function(use)
 
 	use 'neovim/nvim-lspconfig' -- configurations for nvim lsp
 
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = function()
-			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-			ts_update()
-		end,
-	} -- treesitter
+	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- treesitter
 
 	use 'github/copilot.vim' -- copilot for vim
 
 	use 'prettier/vim-prettier' -- prettier for vim
+
+	use {'neoclide/coc.nvim', branch = 'release'} -- coc.nvim
 		
 	use 'folke/tokyonight.nvim' -- theme
 			
